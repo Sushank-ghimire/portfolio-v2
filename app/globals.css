@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0f172a;
+  --foreground: #e2e8f0;
+
+  --muted: #94a3b8;
+  --muted-foreground: #64748b;
+
+  --accent: #5eead4;
+  --accent-strong: #2dd4bf;
+
+  --surface: #111c2e;
+  --border: rgba(148, 163, 184, 0.12);
+
+  --surface-hover: #1e293b;
+  --border-hover: rgba(226, 232, 240, 0.3);
+
+  --muted-dark: #64748b;
+
+  --accent-soft: rgba(45, 212, 191, 0.1);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted-dark: var(--muted-dark);
+
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+
+  --color-border: var(--border);
+  --color-border-hover: var(--border-hover);
+}
+
+*::selection {
+  background: #5eead4;
+  color: #134e4a;
+  font-weight: bold;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: inter sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
