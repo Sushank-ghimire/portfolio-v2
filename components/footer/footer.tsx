@@ -36,18 +36,18 @@ export default function Footer() {
         onClick={() => setModalOpen(true)}
         className="
           fixed
-          right-4
-          bottom-4
+          right-1
+          bottom-1
           z-40
           cursor-pointer
-          p-2
+          p-1
           text-slate-400
           transition-all
           duration-300
           hover:-translate-y-2
           hover:text-teal-300
-          sm:right-6
-          sm:bottom-6
+          sm:right-4
+          sm:bottom-4
           lg:right-8
           lg:bottom-8
         "
@@ -59,8 +59,8 @@ export default function Footer() {
           height={120}
           className="
             h-auto
-            w-24
-            sm:w-28
+            w-20
+            sm:w-20
             lg:w-35
           "
         />
