@@ -3,7 +3,7 @@ import { experience } from "@/constants/portfolio";
 
 export function ExperienceSection() {
   const RESUME_LINK =
-    process.env.RESUME_LINK || "https://resume.ghimiresushank.com.np";
+    process.env.RESUME_LINK || "https://ghimiresushank.com.np/Sushank_Ghimire.pdf";
   return (
     <section id="experience" className="mt-32 scroll-mt-24">
       <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">

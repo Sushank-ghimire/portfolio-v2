@@ -1,4 +1,4 @@
-const CACHE_VERSION = "v3";
+const CACHE_VERSION = "v3.1";
 const STATIC_CACHE = `sushank-static-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `sushank-runtime-${CACHE_VERSION}`;
 const OFFLINE_URL = "/";
@@ -41,8 +41,7 @@ function isApiOrData(url) {
   // Next.js data requests for pages (getServerSideProps/getStaticProps json)
   // and API routes — these carry app state, so prefer fresh data.
   return (
-    url.pathname.startsWith("/_next/data/") ||
-    url.pathname.startsWith("/api/")
+    url.pathname.startsWith("/_next/data/") || url.pathname.startsWith("/api/")
   );
 }
 
@@ -85,7 +84,9 @@ async function staleWhileRevalidate(request, cacheName) {
   const networkPromise = fetch(request)
     .then((response) => {
       if (response && response.ok) {
-        caches.open(cacheName).then((cache) => cache.put(request, response.clone()));
+        caches
+          .open(cacheName)
+          .then((cache) => cache.put(request, response.clone()));
       }
       return response;
     })
