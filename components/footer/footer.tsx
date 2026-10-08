@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import ContactModal from "@/components/contact/modal/contact-modal";
+import { FooterMascot } from "./mascot";
 
 export default function Footer() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -44,7 +45,6 @@ export default function Footer() {
           text-slate-400
           transition-all
           duration-300
-          hover:-translate-y-2
           hover:text-teal-300
           sm:right-4
           sm:bottom-4
@@ -52,18 +52,7 @@ export default function Footer() {
           lg:bottom-8
         "
       >
-        <img
-          src="/rotate.gif"
-          alt="Spinning Tardis from Doctor Who"
-          width={140}
-          height={120}
-          className="
-            h-auto
-            w-20
-            sm:w-20
-            lg:w-35
-          "
-        />
+        <FooterMascot />
       </button>
 
       <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
